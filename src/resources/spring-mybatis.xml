@@ -42,7 +42,7 @@
     </bean> -->
     
     <!-- 数据源  连接池c3p0 -->
-	<!-- <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+	<!-- <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
 		<property name="driverClass" value="${jdbc_driverClassName}"/>
 		<property name="jdbcUrl" value="${jdbc_url}"/>
 		<property name="user" value="${jdbc_username}"/>
@@ -50,7 +50,7 @@
 	</bean> -->
 	
     <!-- 数据源  连接池dbcp -->
-	<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
+	<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
 		<property name="driverClassName" value="${oracleDriverClassName}"/>
 		<property name="url" value="${jdbc_url_oracle}"/>
 		<property name="username" value="${jdbc_username_oracle}"/>
