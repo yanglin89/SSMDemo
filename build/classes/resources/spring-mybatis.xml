@@ -50,7 +50,7 @@
 	</bean> -->
 	
     <!-- 数据源  连接池dbcp -->
-	<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
+	<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close" >
 		<property name="driverClassName" value="${oracleDriverClassName}"/>
 		<property name="url" value="${jdbc_url_oracle}"/>
 		<property name="username" value="${jdbc_username_oracle}"/>
